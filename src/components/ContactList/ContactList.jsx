@@ -24,10 +24,12 @@ const ContactList = () => {
       contact.name.toUpperCase().includes(filter.toUpperCase())
     );
   };
-  // const sortContactList = contacts =>
-  //   contacts.sort((firstContact, secondContact) =>
+
+  // const sortList = () =>
+  //   filterContactsOnChange().sort((firstContact, secondContact) =>
   //     firstContact.name.localeCompare(secondContact.name)
   //   );
+
   return (
     <ContactListBox>
       {filterContactsOnChange().map(({ id, name, number }) => (
