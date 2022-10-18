@@ -22,14 +22,14 @@ const ContactList = () => {
     );
   };
 
-  // const sortList = () =>
-  //   filterContactsOnChange().sort((firstContact, secondContact) =>
-  //     firstContact.name.localeCompare(secondContact.name)
-  //   );
+  const sortContactsByName = () =>
+    [...filterContactsOnChange()].sort((firstContact, secondContact) =>
+      firstContact.name.localeCompare(secondContact.name)
+    );
 
   return (
     <ContactListBox>
-      {filterContactsOnChange().map(({ id, name, number }) => (
+      {sortContactsByName().map(({ id, name, number }) => (
         <ContactListItem key={id}>
           <ContactListText>Name: {name}</ContactListText>
           <ContactListText>Number: {number}</ContactListText>
