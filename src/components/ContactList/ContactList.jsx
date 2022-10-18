@@ -1,4 +1,3 @@
-// import PropTypes from 'prop-types';
 import {
   ContactListBox,
   ContactListItem,
@@ -11,10 +10,8 @@ import { useSelector, useDispatch } from 'react-redux';
 
 const ContactList = () => {
   const dispatch = useDispatch();
-  const contacts = useSelector(getContacts);
-  console.log(contacts);
+  const { contacts } = useSelector(getContacts);
   const filter = useSelector(getFilterValue);
-  console.log(filter);
 
   const filterContactsOnChange = () => {
     if (!filter) {
@@ -49,16 +46,5 @@ const ContactList = () => {
     </ContactListBox>
   );
 };
-
-// ContactList.propTypes = {
-//   contacts: PropTypes.arrayOf(
-//     PropTypes.shape({
-//       id: PropTypes.string.isRequired,
-//       name: PropTypes.string.isRequired,
-//       number: PropTypes.string.isRequired,
-//     })
-//   ),
-//   deleteOnClick: PropTypes.func.isRequired,
-// };
 
 export default ContactList;

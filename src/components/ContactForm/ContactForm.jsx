@@ -7,7 +7,6 @@ import {
   FormInput,
   FormButton,
 } from './ContactForm.styled';
-// import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { addContact } from '../../redux/contactsSlice';
 
@@ -55,9 +54,5 @@ const ContactForm = () => {
     </Formik>
   );
 };
-
-// ContactForm.propTypes = {
-//   onSubmit: PropTypes.func.isRequired,
-// };
 
 export default ContactForm;
